@@ -30,9 +30,11 @@ setData(response.data.conversion_rates)
 API()
 },[])
 let result;
+// transform currancy
 const transform=()=>{
-  let money=input*data[send];
- result=(money*data[reseve]).toFixed(2)
+  let money=input*data[send]; // العملة الحالية
+ result=(money*data[reseve]).toFixed(2) // العملة المحولة 
+ // الشرط إذا كان تحويل لنفس العملة يكون نفس العملة المدخلة
 if(send===reseve)
   result=input
 }
